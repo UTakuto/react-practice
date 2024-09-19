@@ -1,14 +1,30 @@
 import "./App.css";
 import HelloWorld from "./components/HelloWorld";
 import MyFavoriteFoods from "./components/MyFavoriteFoods";
-import HelloUser from "./components/HelloUser";
+// import HelloUser from "./components/HelloUser";
+import Users from "./components/Users";
 
 function App() {
+    const UsersInfo = [
+        { name: "takuto", age: 10, hobbies: ["Cooking", "Running"] },
+        { name: "Hanako", age: 20, hobbies: ["Reading", "Traveling"] },
+        { name: "Tom", age: 30, hobbies: ["Listening", "Cycling"] },
+    ];
+
     return (
         <div>
             <HelloWorld />
             <MyFavoriteFoods />
-            <HelloUser name="takuto" />
+            {UsersInfo.map((UserInfo, index) => {
+                return (
+                    <Users
+                        key={index}
+                        name={UserInfo.name}
+                        age={UserInfo.age}
+                        hobbies={UserInfo.hobbies}
+                    />
+                );
+            })}
         </div>
     );
 }
