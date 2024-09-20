@@ -21,6 +21,7 @@ export default function FetchData() {
 
     return (
         <div>
+            <h2>API</h2>
             <ul>
                 {data.slice(0, 5).map((post) => (
                     <li key={post.id}>{post.title}</li>
