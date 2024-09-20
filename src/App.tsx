@@ -2,6 +2,7 @@ import "./App.css";
 import Counter from "./components/Counter";
 import HelloWorld from "./components/HelloWorld";
 import MyFavoriteFoods from "./components/MyFavoriteFoods";
+import TodoList from "./components/TodoList";
 // import HelloUser from "./components/HelloUser";
 import Users from "./components/Users";
 
@@ -14,6 +15,10 @@ function App() {
 
     return (
         <div>
+            <div>
+                <h2>TodoList</h2>
+                <TodoList />
+            </div>
             <HelloWorld />
             <MyFavoriteFoods />
             {UsersInfo.map((UserInfo, index) => {
