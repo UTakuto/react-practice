@@ -1,5 +1,6 @@
 import "./App.css";
 import Counter from "./components/Counter";
+import FetchData from "./components/FetchData";
 import HelloWorld from "./components/HelloWorld";
 import MyFavoriteFoods from "./components/MyFavoriteFoods";
 import TodoList from "./components/TodoList";
@@ -14,6 +15,10 @@ function App() {
 
     return (
         <div>
+            <div>
+                <h2>API</h2>
+                <FetchData />
+            </div>
             <div>
                 <h2>TodoList</h2>
                 <TodoList />
