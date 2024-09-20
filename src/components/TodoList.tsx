@@ -3,7 +3,7 @@ import TodoItem from "./TodoItem";
 
 export default function TodoList() {
     //todo list の格納場所
-    const [todos, setTodos] = useState<string[]>([]);
+    const [todos, setTodos] = useState<string[]>([]); // string[] は配列の中身が文字列であることを示す
 
     //新しいtodo list の追加するための入力保管場所
     const [newTodo, setNewTodo] = useState("");
