@@ -1,4 +1,5 @@
 import "./App.css";
+import Counter from "./components/Counter";
 import HelloWorld from "./components/HelloWorld";
 import MyFavoriteFoods from "./components/MyFavoriteFoods";
 // import HelloUser from "./components/HelloUser";
@@ -25,6 +26,7 @@ function App() {
                     />
                 );
             })}
+            <Counter />
         </div>
     );
 }
