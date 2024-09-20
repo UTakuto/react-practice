@@ -5,6 +5,7 @@ import FetchData from "./components/FetchData";
 import HelloWorld from "./components/HelloWorld";
 import Home from "./components/Home";
 import MyFavoriteFoods from "./components/MyFavoriteFoods";
+import NotFound from "./components/NotFound";
 import TodoList from "./components/TodoList";
 import Users from "./components/Users";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
@@ -31,7 +32,10 @@ function App() {
                     />
                 );
             })}
+            {/* count up setting */}
             <Counter />
+
+            {/* todo list */}
             <div
                 style={{
                     borderTop: "solid 1px #9c9c9c",
@@ -41,16 +45,13 @@ function App() {
                 <h2>TodoList</h2>
                 <TodoList />
             </div>
-            {/* <div style={{ borderTop: "solid 1px #9c9c9c" }}>
-                <FetchData />
-            </div> */}
 
             <Router>
                 <h2
-                    style={{
-                        borderTop: "solid 1px #9c9c9c",
-                        paddingTop: "10px",
-                    }}
+                // style={{
+                //     borderTop: "solid 1px #9c9c9c",
+                //     paddingTop: "10px",
+                // }}
                 >
                     React Router
                 </h2>
@@ -66,6 +67,7 @@ function App() {
                     <Route path="/" element={<Home />}></Route>
                     <Route path="/about" element={<About />}></Route>
                     <Route path="/fetch-data" element={<FetchData />}></Route>
+                    <Route path="*" element={<NotFound />}></Route>
                 </Routes>
             </Router>
         </div>
