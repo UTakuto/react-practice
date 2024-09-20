@@ -3,7 +3,6 @@ import Counter from "./components/Counter";
 import HelloWorld from "./components/HelloWorld";
 import MyFavoriteFoods from "./components/MyFavoriteFoods";
 import TodoList from "./components/TodoList";
-// import HelloUser from "./components/HelloUser";
 import Users from "./components/Users";
 
 function App() {

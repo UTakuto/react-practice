@@ -10,6 +10,7 @@ export default function TodoList() {
 
     //新しいTodoをtodos配列に格納する関数
     const addTodo = () => {
+        // ...を使うことでtodos配列の中身を展開して新しい配列を生成
         setTodos([...todos, newTodo]);
         setNewTodo(""); // 入力フィールドを空にする
     };
