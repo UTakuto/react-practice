@@ -15,6 +15,12 @@ export default function TodoList() {
         setNewTodo(""); // 入力フィールドを空にする
     };
 
+    //指定したindexのtodoを削除する関数
+    //削除したいToDoのindexの数値指定
+    const deleteTodo = (indexToDelete: number) => {
+        setTodos(todos.filter((_, index) => index !== indexToDelete)); // _ は配列の各要素を表す
+    };
+
     return (
         <div>
             {/* newTodoの値が変わるたびに状態の更新 */}
@@ -33,7 +39,15 @@ export default function TodoList() {
             <ul>
                 {/* todo配列の各要素をmap処理。TotoItem component を生成・表示 */}
                 {todos.map((todo, index) => (
-                    <TodoItem key={index} todo={todo} />
+                    <div>
+                        <TodoItem
+                            key={index}
+                            todo={todo}
+                            onDelete={() => {
+                                deleteTodo(index); //削除ボタンが押された時にindexを渡して削除
+                            }}
+                        />
+                    </div>
                 ))}
             </ul>
         </div>
